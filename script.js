@@ -1,0 +1,16 @@
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+
+topBtn.onclick = function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
